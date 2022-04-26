@@ -14,7 +14,7 @@ def update_feed(widget, *args):
         while len(feed) > 100:
             popped_post = feed.pop(0)
     for i in range(len(feed)):
-        post = feed[-1]
+        post = feed[0]
         post_widget = Post(widget, post)
         feed.remove(post)
     log.log(os.path.basename(__file__), log.ui, f"Finished updating Feed Widget")
